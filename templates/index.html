@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serial Data</title>
+</head>
+<body>
+    <h1>Serial Data</h1>
+    <p>Timestamp: {{ data.timestamp }}</p>
+    <p>Zalogovnik1: {{ data.zalogovnik1 }}</p>
+    <p>Zalogovnik2: {{ data.zalogovnik2 }}</p>
+    <p>Zalogovnik3: {{ data.zalogovnik3 }}</p>
+    <p>Zalogovnik4: {{ data.zalogovnik4 }}</p>
+    <p>Zunanja Temp: {{ data.zunanja_temp }}</p>
+    <p>Pec F: {{ data.pec_f }}</p>
+    <p>Pec R: {{ data.pec_r }}</p>
+    <p>Bojler F: {{ data.bojler_f }}</p>
+    <p>Bojler R: {{ data.bojler_r }}</p>
+    <p>Bojler Pumpa: {{ data.bojler_pumpa }}</p>
+    <p>Kopalnica Set: {{ data.kopalnica_set }}</p>
+    <p>Kopalnica F: {{ data.kopalnica_f }}</p>
+    <p>Kopalnica R: {{ data.kopalnica_r }}</p>
+    <p>Kopalnica Pumpa: {{ data.kopalnica_pumpa }}</p>
+    <p>Sobe Set: {{ data.sobe_set }}</p>
+    <p>Sobe F: {{ data.sobe_f }}</p>
+    <p>Sobe R: {{ data.sobe_r }}</p>
+    <p>Sobe Pumpa: {{ data.sobe_pumpa }}</p>
+    <p>Dnevna Set: {{ data.dnevna_set }}</p>
+    <p>Dnevna F: {{ data.dnevna_f }}</p>
+    <p>Dnevna R: {{ data.dnevna_r }}</p>
+    <p>Dnevna Pumpa: {{ data.dnevna_pumpa }}</p>
+    <p>Izba Set: {{ data.izba_set }}</p>
+    <p>Izba F: {{ data.izba_f }}</p>
+    <p>Izba R: {{ data.izba_r }}</p>
+    <p>Izba Pumpa: {{ data.izba_pumpa }}</p>
+    <p>Kopalnica: {{ data.kopalnica }}</p>
+    <p>Sobe: {{ data.sobe }}</p>
+    <p>Dnevna: {{ data.dnevna }}</p>
+    <p>Izba: {{ data.izba }}</p>
+
+    <h2>Send Command</h2>
+    <form action="{{ url_for('send_command') }}" method="post">
+        <input type="text" name="command" placeholder="Enter command">
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>

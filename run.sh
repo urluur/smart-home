@@ -1,3 +1,3 @@
 #!/bin/bash
-
-python3 martin.py
+pip install flask pyserial
+python3 app.py
